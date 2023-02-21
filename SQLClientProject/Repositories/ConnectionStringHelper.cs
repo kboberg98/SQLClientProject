@@ -15,6 +15,7 @@ namespace SQLClientProject.Repositories
             connectionStringBuilder.DataSource = "DESKTOP-5AU9VHR\\SQLEXPRESS";
             connectionStringBuilder.InitialCatalog = "Chinook";
             connectionStringBuilder.IntegratedSecurity = true;
+            connectionStringBuilder.TrustServerCertificate = true;
             return connectionStringBuilder.ConnectionString;
         }
     }

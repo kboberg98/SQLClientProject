@@ -8,6 +8,9 @@ namespace SQLClientProject
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
+
+            ICustomerRepository repository = new CustomerRepository();
+            TestSelectAll(repository);
         }
 
         static void TestSelectAll(ICustomerRepository repository)
@@ -17,14 +20,14 @@ namespace SQLClientProject
 
         static void TestSelect(ICustomerRepository repository)
         {
-            PrintCustomer(repository.GetCustomer("ZZZZ"));
+            PrintCustomer(repository.GetCustomer(1));
         }
 
         static void TestInsert(ICustomerRepository repository)
         {
             Customer test = new Customer()
             {
-                CustomerId = 111,
+                CustomerId = 1,
                 FirstName = "testfirstname",
                 LastName = "testlastname",
                 Country = "norway",
