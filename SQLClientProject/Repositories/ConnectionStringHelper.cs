@@ -12,7 +12,7 @@ namespace SQLClientProject.Repositories
         public static string GetConnectionString()
         {
             SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder();
-            connectionStringBuilder.DataSource = "DESKTOP-5AU9VHR\\SQLEXPRESS";
+            connectionStringBuilder.DataSource = "N-NO-01-01-0688\\SQLEXPRESS";
             connectionStringBuilder.InitialCatalog = "Chinook";
             connectionStringBuilder.IntegratedSecurity = true;
             connectionStringBuilder.TrustServerCertificate = true;
