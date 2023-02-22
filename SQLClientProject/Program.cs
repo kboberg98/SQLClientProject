@@ -13,8 +13,10 @@ namespace SQLClientProject
             //TestUpdate(repository);
             //ICustomerCountryRepository repository = new CustomerCountryRepository();
             //TestSelectCustomerCountries(repository);
-            ICustomerSpenderRepository repository = new CustomerSpenderRepository();
-            TestSelectCustomerSpenders(repository);
+            //ICustomerSpenderRepository repository = new CustomerSpenderRepository();
+            //TestSelectCustomerSpenders(repository);
+            ICustomerGenreRepository repository = new CustomerGenreRepository();
+            TestSelectCustomerGenre(repository);
         }
 
         static void TestSelectAll(ICustomerRepository repository)
@@ -135,6 +137,24 @@ namespace SQLClientProject
             Console.WriteLine($"---{customerSpender.CustomerId} {customerSpender.FirstName} {customerSpender.LastName} {customerSpender.TotalSum} ---");
         }
 
+
+        static void TestSelectCustomerGenre(ICustomerGenreRepository repository)
+        {
+            PrintAllCustomerGenres(repository.GetAllCustomerGenre(12));
+        }
+
+        static void PrintAllCustomerGenres(IEnumerable<CustomerGenre> customerGenres)
+        {
+            foreach (CustomerGenre customerGenre in customerGenres)
+            {
+                PrintCustomerGenre(customerGenre);
+            }
+        }
+
+        static void PrintCustomerGenre(CustomerGenre customerGenre)
+        {
+            Console.WriteLine($"---{customerGenre.CustomerId} {customerGenre.FirstName} {customerGenre.LastName} {customerGenre.PopularGenre} ---");
+        }
 
     }
 }
