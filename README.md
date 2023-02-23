@@ -18,4 +18,4 @@ SQLClientProject.Models: A class library project that contains the model classes
 The repository interfaces and classes are organized into sub-namespaces based on the type of query being executed. For example, the CustomerGenreRepository class implements the ICustomerGenreRepository interface and executes a query to return a list of customers and their favorite music genres.
 
 ## Running the Tests
-The SQLClientProject.Program includes tests that test the functionality of the repository classes. Start Debugging/Start Without Debugging to run the tests in Program.cs. Most tests are commented out, uncomment to run the a specific test.
+The SQLClientProject.Program includes tests that test the functionality of the repository classes. Start Debugging/Start Without Debugging to run the tests in Program.cs. Most tests are commented out, uncomment to run a specific test.
