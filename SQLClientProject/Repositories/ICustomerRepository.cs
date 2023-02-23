@@ -15,6 +15,5 @@ namespace SQLClientProject.Repositories
         public List<Customer> GetCustomersPage(int limit, int offset);
         public bool AddNewCustomer(Customer customer);
         public bool UpdateCustomer(Customer customer);
-        public bool DeleteCustomer(int id);
     }
 }

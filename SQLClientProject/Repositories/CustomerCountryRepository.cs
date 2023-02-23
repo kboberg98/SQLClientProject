@@ -48,4 +48,9 @@ namespace SQLClientProject.Repositories
             return customerCountryList;
         }
     }
+    /// <summary>
+    /// Retrieves a list of all customer countries and the number of customers in each country, sorted in descending order by the number of customers.
+    /// </summary>
+    /// <returns>A list of CustomerCountry objects representing each country and the number of customers in that country.</returns>
+    /// <exception cref="SqlException">Thrown when an error occurs while executing the SQL query.</exception>
 }

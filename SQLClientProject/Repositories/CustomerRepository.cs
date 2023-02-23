@@ -51,6 +51,11 @@ namespace SQLClientProject.Repositories
             }
             return customerList;
         }
+        /// <summary>
+        /// Returns a List of all customers from the database
+        /// </summary>
+        /// <returns>List of Customer objects</returns>
+        /// <exception cref="SqlException">Thrown when a database operation fails</exception>
 
         public List<Customer> GetCustomersPage(int limit, int offset)
         {
@@ -98,6 +103,13 @@ namespace SQLClientProject.Repositories
 
             return customerList;
         }
+        /// <summary>
+        /// Returns a List of all customers from the database based on limit and offset
+        /// </summary>
+        /// /// <param name="limit">The maximum number of customers to return</param>
+        /// <param name="offset">The number of customers to skip before returning the results</param>
+        /// <returns>List of Customer objects</returns>
+        /// <exception cref="SqlException">Thrown when a database operation fails</exception>
 
         public Customer GetCustomer(int id)
         {
@@ -141,6 +153,12 @@ namespace SQLClientProject.Repositories
             }
             return customer;
         }
+        /// <summary>
+        /// Retrieves a customer with the specified id from the database
+        /// </summary>
+        /// <param name="id">The id of the customer to retrieve</param>
+        /// <returns>The Customer object with the specified id</returns>
+        /// <exception cref="SqlException">Thrown when there is an error connecting to or querying the database</exception>
 
         public Customer GetCustomerByName(string name)
         {
@@ -184,6 +202,13 @@ namespace SQLClientProject.Repositories
             }
             return customer;
         }
+        /// <summary>
+        /// Retrieves a customer with the specified first name from the database
+        /// </summary>
+        /// <param name="name">The first name of the customer to retrieve</param>
+        /// <returns>The Customer object with the specified first name</returns>
+        /// <exception cref="SqlException">Thrown when there is an error connecting to or querying the database</exception>
+        
         public bool AddNewCustomer(Customer customer)
         {
             bool success = false;
@@ -218,11 +243,12 @@ namespace SQLClientProject.Repositories
             }
             return success;
         }
-
-        public bool DeleteCustomer(int id)
-        {
-            throw new NotImplementedException();
-        }
+        /// <summary>
+        /// Adds a new customer to the database
+        /// </summary>
+        /// <param name="customer">The Customer object to add to the database</param>
+        /// <returns>True if the customer was successfully added to the database, false otherwise</returns>
+        /// <exception cref="SqlException">Thrown when there is an error connecting to or querying the database</exception>
 
         public bool UpdateCustomer(Customer customer)
         {
@@ -259,5 +285,11 @@ namespace SQLClientProject.Repositories
             }
             return success;
         }
+        /// <summary>
+        /// Updates the information of an existing customer in the database
+        /// </summary>
+        /// <param name="customer">The updated Customer object to be saved in the database</param>
+        /// <returns>True if the customer's information was successfully updated in the database, false otherwise</returns>
+        /// <exception cref="SqlException">Thrown when there is an error connecting to or querying the database</exception>
     }
 }

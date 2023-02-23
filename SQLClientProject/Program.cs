@@ -7,18 +7,20 @@ namespace SQLClientProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
-            //ICustomerRepository repository = new CustomerRepository();
+            ICustomerRepository repository = new CustomerRepository();
+            TestSelectAll(repository);
+            //TestSelect(repository);
+            //TestSelectByName(repository);
+            //TestInsert(repository);
             //TestUpdate(repository);
             //ICustomerCountryRepository repository = new CustomerCountryRepository();
             //TestSelectCustomerCountries(repository);
             //ICustomerSpenderRepository repository = new CustomerSpenderRepository();
             //TestSelectCustomerSpenders(repository);
-            ICustomerGenreRepository repository = new CustomerGenreRepository();
-            TestSelectCustomerGenre(repository);
+            //ICustomerGenreRepository repository = new CustomerGenreRepository();
+            //TestSelectCustomerGenre(repository);
         }
-
+        // Customer Tests
         static void TestSelectAll(ICustomerRepository repository)
         {
             PrintCustomers(repository.GetAllCustomers());
@@ -60,11 +62,6 @@ namespace SQLClientProject
             }
         }
 
-        static void TestDelete(ICustomerRepository repository)
-        {
-            
-        }
-
         static void TestUpdate(ICustomerRepository repository)
         {
             Customer test = new Customer()
@@ -100,7 +97,8 @@ namespace SQLClientProject
         {
             Console.WriteLine($"--- {customer.CustomerId} {customer.FirstName} {customer.LastName} {customer.Country} {customer.PostalCode} {customer.Email} {customer.Phone} ---");
         }
-
+        
+        // CustomerCountry Tests
         static void TestSelectCustomerCountries(ICustomerCountryRepository repository)
         {
             PrintCustomerCountries(repository.GetAllCustomerCountries());
@@ -119,6 +117,7 @@ namespace SQLClientProject
             Console.WriteLine($"--- {customerCountry.Country} {customerCountry.NumCustomers} ---");
         }
 
+        // CustomerSpender Tests
         static void TestSelectCustomerSpenders(ICustomerSpenderRepository repository)
         {
             PrintCustomerSpenders(repository.GetCustomerSpenders());
@@ -137,7 +136,7 @@ namespace SQLClientProject
             Console.WriteLine($"---{customerSpender.CustomerId} {customerSpender.FirstName} {customerSpender.LastName} {customerSpender.TotalSum} ---");
         }
 
-
+        //CustomerGenre Tests
         static void TestSelectCustomerGenre(ICustomerGenreRepository repository)
         {
             PrintAllCustomerGenres(repository.GetAllCustomerGenre(12));

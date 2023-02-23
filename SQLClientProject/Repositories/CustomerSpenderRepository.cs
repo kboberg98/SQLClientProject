@@ -49,5 +49,10 @@ namespace SQLClientProject.Repositories
             }
             return customerSpenderList;
         }
+        /// <summary>
+        /// Retrieves a list of CustomerSpender objects containing the customer ID, first name, last name, and total sum spent by each customer.
+        /// </summary>
+        /// <returns>A list of CustomerSpender objects.</returns>
+        /// <exception cref="SqlException">Thrown when an error occurs while executing the SQL query.</exception>
     }
 }

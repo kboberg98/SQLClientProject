@@ -58,5 +58,11 @@ namespace SQLClientProject.Repositories
             }
             return customerGenreList;
         }
+        /// <summary>
+        /// Gets a list of customers and their most popular music genre.
+        /// </summary>
+        /// <param name="id">The ID of the customer to retrieve the information for.</param>
+        /// <returns>A list of CustomerGenre objects representing the customers and their most popular music genre.</returns>
+        /// <exception cref="SqlException">Thrown when an error occurs while retrieving data from the database.</exception>
     }
 }
