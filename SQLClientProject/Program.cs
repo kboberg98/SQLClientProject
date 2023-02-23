@@ -13,10 +13,13 @@ namespace SQLClientProject
             //TestSelectByName(repository);
             //TestInsert(repository);
             //TestUpdate(repository);
+
             //ICustomerCountryRepository repository = new CustomerCountryRepository();
             //TestSelectCustomerCountries(repository);
+
             //ICustomerSpenderRepository repository = new CustomerSpenderRepository();
             //TestSelectCustomerSpenders(repository);
+
             //ICustomerGenreRepository repository = new CustomerGenreRepository();
             //TestSelectCustomerGenre(repository);
         }
